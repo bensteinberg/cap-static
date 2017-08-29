@@ -1,0 +1,15 @@
+<div class="gallery-sq">
+  {% for project in site.projects_active %}
+    <a class="gallery-item" href="{{ project.url }}">
+      <figure>
+        <img src="{{ site.baseurl }}/assets/thumbs/400x300r/{{  project.thumbnail_image }}"
+             srcset="{{ site.baseurl }}/assets/thumbs/400x300r/{{  project.thumbnail_image }} 1x,
+                     {{ site.baseurl }}/assets/thumbs/800x600r/{{  project.thumbnail_image }} 2x"
+             alt=""
+             class="img-full-width">
+      </figure>
+      <strong class="title">{{ project.title }}</strong>
+      <span class="logline">{{ project.what_does_it_do | strip }}</span>
+    </a>
+  {% endfor %}
+</div>
