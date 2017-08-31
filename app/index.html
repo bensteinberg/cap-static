@@ -6,41 +6,30 @@ title-tag: The Library Innovation Lab at Harvard University
 description: "Home of Perma.cc, H2O, Awesome Box, and others. We're building things in libraries."
 slug: home
 sharing-image: images/header-splash-logo-ani@1x.gif
-custom-scripts: ['jquery-3.1.1.min.js', 'home.js']
+custom-scripts: ['jquery-3.1.1.min.js']
 ---
 
 <section class="home-section background">
+  <h3>BACKGROUND</h3>
+  <span class="description">The story of the past, present, and future of CAP</span>
 
-  <!--<div class="sleeve">-->
-
-    <h3>BACKGROUND</h3>
-    <span class="description">The story of the past, present, and future of CAP</span>
-
-    {% include background.html %}
-
-    <a href="{{ site.baseurl }}/background/"
-       role="button"
-       aria-label="Read more background">
-      <span>READ MORE</span>
-    </a>
-
-  <!--</div>-->
+  {% include background.html %}
+  <a href="{{ site.baseurl }}/background/"
+     role="button"
+     aria-label="Read more background">
+    <span>READ MORE</span>
+  </a>
 </section>
 
 <section class="home-section dive-in">
-  <!--<div class="sleeve">-->
-
-    <h3>DIVE IN!</h3>
-    <span class="description">Browse, download, work with the data</span>
-    {% include dive-in.html %}
-
-  <!--</div>-->
+  <h3>DIVE IN!</h3>
+  <span class="description">Browse, download, work with the data</span>
+  {% include dive-in.html %}
 </section>
 
 <section class="home-section gallery">
   <h3>DATA EXPLORATIONS</h3>
   <span class="description">The story of the past, present, and future of CAP</span>
-
   {% include gallery.html %}
 </section>
 

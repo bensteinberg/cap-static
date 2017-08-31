@@ -285,6 +285,7 @@ nav {
   li {
       display: inline-block;
       float: none;
+
       //&:first-child {  display: none; }
       &:nth-child(n+5) { @include hide-ontablet-then(inline-block); }
   }
@@ -341,14 +342,14 @@ nav {
     a {
       @extend %vcenter-child;
       @include link-highlight($color-black, $color-highlight);
-      padding: 0 $grid;
+      //padding: 0 $grid;
       height: $grid * 6;
-      @include respond(2) { height: $grid * 7; }
+      //@include respond(2) { height: $grid * 7; }
       @include respond(3) {
         padding: 0 21px;
-        height: $grid * 11;
+        height: $grid * 8;
       }
-      @include respond(4) { padding: 0 28px; }
+    //  @include respond(4) { padding: 0 28px; }
     }
   }
 }
@@ -820,7 +821,7 @@ a.gallery-item {
 }
 
 .gallery-crl {
-  max-width: nth($respond-breakpoints,5);
+  //max-width: nth($respond-breakpoints,5);
   margin-left: -14px;
   margin-right: -14px;
   margin-top: $grid * 4;
@@ -831,7 +832,6 @@ a.gallery-item {
     margin-right: -$double;
   }
   @include respond(4) {
-    margin: 0 auto;
     text-align: left;
   }
 
@@ -839,15 +839,14 @@ a.gallery-item {
     width: 49%;
     padding: 0 $grid;
     @include respond(3) {
-      width: $grid * 25; }
+      width: $grid * 25;
+      margin-left: $grid * 5;
+      margin-right: $grid * 5;
+    }
     @include respond(4) {
       padding: 0 $double;
     }
     border-top: none;
-  }
-
-  figure {
-    @extend %thumb-rounded;
   }
 }
 

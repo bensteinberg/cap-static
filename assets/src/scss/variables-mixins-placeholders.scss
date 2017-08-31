@@ -355,6 +355,7 @@ $color-acidmint: #18F1C0;
   display: inline-block;
   width: 100%;
   vertical-align: top;
+  font-family: $font-body;
   text-align: center;
   margin: 0 0 $double * 2 0;
   border-top: 1px solid $color-trans-lightgray;
@@ -372,11 +373,13 @@ $color-acidmint: #18F1C0;
 %gallery-item-title {
   display: block;
   //@include include-arrow(1px);
-  font-weight: 300;
+  font-family: $font-semibold;
   margin-top: $grid;
+  margin-bottom: $grid;
   overflow: visible;
   color: $color-blue;
-  text-decoration: underline;
   letter-spacing: 1px;
+  border-top: 1px solid $color-gray;
+  padding-top: 10px;
   &:active { color: $color-black; }
 }
