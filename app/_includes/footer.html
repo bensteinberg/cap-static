@@ -1,25 +1,10 @@
-{% capture footer-file %}
-  {% if page.custom-footer %}
-    {{ page.slug }}
-  {% else %}
-    home
-  {% endif %}
-{% endcapture %}
-
 <figure class="footer-logo">
-  <img src="{{ site.baseurl }}/assets/thumbs/351x143r/lab-logo-footer-{{ footer-file | strip }}.png"
-       srcset="{{ site.baseurl }}/assets/thumbs/351x143r/lab-logo-footer-{{ footer-file | strip }}.png 1x,
-               {{ site.baseurl }}/assets/thumbs/702x286r/lab-logo-footer-{{ footer-file | strip }}.png 2x"
-       alt="Library Innovation Lab"
-       class="img-full-width">
+  <img src="{{ site.baseurl }}/assets/images/footer-logo-white.png"
+       srcset="{{ site.baseurl }}/assets/images/footer-logo-white.png 1x,
+               {{ site.baseurl }}/assets/images/footer-logo-white.png 2x"
+       alt="Library Innovation Lab">
 </figure>
-<ul>
-  <li><a href="{{ site.baseurl }}/">Home</a></li>
-  <li><a href="{{ site.baseurl }}/about/">About</a></li>
-  <li><a href="{{ site.baseurl }}/projects/">Projects</a></li>
-  <li><a href="{{ site.baseurl }}/sketches/">Sketches</a></li>
-  <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
-</ul>
+<h5 class="footer-caption">{{ page.title }}</h5>
 <div class="footer-copyright">
   <p>&copy;2017 The President and Fellows of Harvard University</p>
   <p>The content on this site is covered under a Creative Commons Attribution-ShareAlike 3.0 Unported license unless otherwise noted.</p>

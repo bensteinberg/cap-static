@@ -1,12 +1,5 @@
 ////////////////////////////////////////////////
 
-//  dan o. williams
-//  library innovation lab scss
-//  styles.scss > ../css/styles.css
-//  August 2015
-//
-//  (subsequently revised in 12/16 by other LIL developers)
-
 
 // See commentary around containers/sleeves/slices for
 // info on how the theme works
@@ -146,12 +139,27 @@ a {
 }
 
 a[role='button'] {
-  @include button-basic(20);
-  width: $grid * 29;
+  @include button-basic(10);
+  width: $grid * 10;
   margin: $grid * 3 auto $double auto;
-  span { @include include-arrow(1px); }
+  //span { @include include-arrow(1px); }
   &:active {
     span  { @include include-arrow-white; }
+  }
+}
+
+a[role='button'].round-button {
+  border-radius: 100px;
+  border: 0px;
+  width: 128px;
+  height: 128px;
+  background: $color-blue;
+  color: $color-white;
+  font-family: $font-body;
+  letter-spacing: 1;
+  padding: 32% 0%;
+  &:active, &:hover {
+    background-color: $color-green;
   }
 }
 
@@ -227,8 +235,38 @@ h2 {
 ////////////////////////////////////////////////
 //  header
 
+header {
+  border-bottom: 1px solid $color-gray;
+  margin: 5px;
+}
+
+header > img {
+  max-height: 40px;
+}
+
+header > img.cap-logo, header > figcaption {
+  float: left;
+  margin: 5px;
+}
+
+header > figcaption {
+  font-size: 18px;
+  font-family: $font-bold;
+  letter-spacing: 1px;
+}
+
+header > img.lil-logo {
+  float: right;
+}
+
+
+////////////////////////////////////////////////
+// nav
+
 nav {
+  padding: 38px 0px;
   text-align: center;
+  font-family: $font-bold;
 
   ul {
     padding: 0;
@@ -305,12 +343,12 @@ nav {
 //  footer
 
 body > footer {
-  background: $color-brightyellow;
+  background: $color-blue;
   color: $color-white;
   font-weight: 700;
-  text-align: right;
+  text-align: center;
   padding: $grid * 3 $double;
-  overflow: auto;
+  //overflow: auto;
   @include respond(3) {
     padding: $double * 2;
   }
@@ -339,11 +377,18 @@ body > footer {
 }
 
 .footer-logo {
-  float: left;
   width: 50%;
-  max-width: $grid * 44;
-  margin: 0;
+  max-width: $grid * 10;
+  margin: 0 auto;
 }
+
+.footer-caption {
+  font-family: $font-bold;
+  letter-spacing: 3px;
+  font-size: 21px;
+  padding-top: 0px;
+}
+
 
 .footer-copyright {
   margin-top: $double;
@@ -654,7 +699,7 @@ section, .container {
   }
 }
 
-// Galttery Items
+// Gallery Items
 .gallery-item {
   @extend %gallery-item;
 
@@ -1222,26 +1267,6 @@ a.link-project {
 
 // home page header
 .home {
-  header {
-    @extend %vcenter-parent;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-
-    div {
-      @extend %vcenter-child;
-      text-align: center;
-      font-weight: 700;
-      padding: $double;
-      padding-bottom: 95px;
-
-      figure {
-        margin: 0 auto;
-        max-width: nth($respond-breakpoints,3) + 1;
-      }
-    }
-  }
-
   nav {
     position: absolute;
     bottom: 0;
@@ -1272,6 +1297,22 @@ a.link-project {
       font-size: 40px;
       margin-top: $grid * 10;
     }
+  }
+}
+
+.home {
+  .hero-group {
+    margin: 3em;
+    text-align: center;
+  }
+  .hero-title {
+    font-family: $font-bold;
+    font-size: 50px;
+    margin: 1em;
+  }
+
+  .hero-subtitle {
+    font-family: $font-light;
   }
 }
 
@@ -1318,6 +1359,43 @@ a.link-project {
 }
 
 //  about page, spacing and separation of containers
+
+section.home-section {
+  text-align: center;
+  h3 {
+    font-family: $font-bold;
+    font-size: 24px;
+  }
+  span.description {
+    font-family: $font-body;
+    font-size: 24px;
+  }
+  table {
+    tr > th, tr > td {
+      text-align: center;
+      margin: 0px 10px;
+
+    }
+    th {
+      font-size: 22px;
+      color: $color-blue;
+      border-bottom: 1px solid $color-blue;
+    }
+  }
+}
+
+section.home-section {
+  &.background {
+    background-color: $color-tan;
+  }
+  &.dive-in {
+    background-color: $color-white;
+  }
+  &.gallery {
+    background-color: $color-tan-gray;
+  }
+}
+
 section.people-affiliated {
   padding-bottom: 0;
 }
@@ -1394,6 +1472,14 @@ section.people-unaffiliated .list {
 
 }
 
+.background.gallery-crl {
+  @include respond(3) {
+    //margin: $grid * 4 auto 0 auto;
+    text-align: center;
+  }
+}
+
+
 // both sketch section on home page,
 // and sketch gallery page
 // spacing tweaks
@@ -1463,9 +1549,9 @@ section.people-unaffiliated .list {
   margin-bottom: 32px;
 }
 
-// Footer Colors
-.projects footer { background-color: $color-acidmint; }
-
-.project footer { background-color: $color-highlight; }
-
-.about footer { background-color: $color-electricblue; }
+//// Footer Colors
+//.projects footer { background-color: $color-acidmint; }
+//
+//.project footer { background-color: $color-highlight; }
+//
+//.about footer { background-color: $color-electricblue; }
