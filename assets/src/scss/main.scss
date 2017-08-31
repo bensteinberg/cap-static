@@ -551,9 +551,9 @@ body > footer {
 //
 // for convenience, all <section>s are containers
 section, .container {
-  padding: $grid * 3 $double;
+  padding: $grid * 3 $double, 0px;
   background-color: $color-trans-whispergray;
-  @include respond(3) { padding: $grid * 4 $double * 2; }
+  @include respond(3) { padding: $grid * 4 $double * 2, 0px; }
   @include respond(4) { padding-top: $grid * 6; }
 }
 
