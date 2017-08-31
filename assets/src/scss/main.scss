@@ -159,7 +159,10 @@ a[role='button'].round-button {
   letter-spacing: 1;
   padding: 32% 0%;
   &:active, &:hover {
-    background-color: $color-green;
+    background-color: $color-white;
+    border: 2px solid $color-blue;
+    color: $color-blue;
+    padding: 31% 0%;
   }
 }
 
@@ -264,9 +267,27 @@ header > img.lil-logo {
 // nav
 
 nav {
-  padding: 38px 0px;
   text-align: center;
   font-family: $font-bold;
+  border: 1px solid $color-gray-dark;
+  border-left: 0px;
+  border-right: 0px;
+  li a:link.highlighted {
+    color: $color-blue
+  }
+
+  ul {
+      padding: $double 0 $double 0;
+      overflow: auto;
+      text-align: center;
+  }
+
+  li {
+      display: inline-block;
+      float: none;
+      //&:first-child {  display: none; }
+      &:nth-child(n+5) { @include hide-ontablet-then(inline-block); }
+  }
 
   ul {
     padding: 0;
@@ -331,6 +352,7 @@ nav {
     }
   }
 }
+
 
 .header-nav-logo {
   position: absolute;
@@ -1267,26 +1289,6 @@ a.link-project {
 
 // home page header
 .home {
-  nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    ul {
-      padding: $double 0 $double 0;
-      overflow: auto;
-      text-align: center;
-    }
-
-    li {
-      display: inline-block;
-      float: none;
-      &:first-child {  display: none; }
-      &:nth-child(n+5) { @include hide-ontablet-then(inline-block); }
-    }
-  }
-
   h1 {
     margin-top: $double * 2;
     margin-bottom: 0;
@@ -1302,8 +1304,10 @@ a.link-project {
 
 .home {
   .hero-group {
-    margin: 3em;
+    margin: 0 auto;
     text-align: center;
+    max-width: $grid * 85;
+    padding: 3em 0em 0em 0em;
   }
   .hero-title {
     font-family: $font-bold;
@@ -1312,7 +1316,9 @@ a.link-project {
   }
 
   .hero-subtitle {
-    font-family: $font-light;
+    font-family: $font-body;
+    font-size: 24px;
+    text-align: center;
   }
 }
 
