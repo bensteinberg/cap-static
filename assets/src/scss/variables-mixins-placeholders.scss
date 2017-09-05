@@ -261,8 +261,17 @@ $color-acidmint: #18F1C0;
     border-color: $color-blue;
     background: $color-blue;
   }
-
 }
+
+@mixin button-basic-white($padding) {
+  @include button-basic($padding);
+  border-color: $color-white;
+
+  &:hover, &:active {
+    border-color: $color-white !important;
+  }
+}
+
 
 // add the arrow sprite after an element
 @mixin include-arrow($offset) {

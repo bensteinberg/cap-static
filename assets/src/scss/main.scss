@@ -178,13 +178,15 @@ a[role='button'].round-button {
   background: $color-blue;
   color: $color-white;
   font-family: $font-body;
-  letter-spacing: 1;
-  padding: 32% 0%;
+  letter-spacing: 1px;
+
   &:active, &:hover {
     background-color: $color-white;
     border: 2px solid $color-blue;
     color: $color-blue;
-    padding: 31% 0%;
+  }
+  p {
+    margin-top: 40%;
   }
 }
 
@@ -444,49 +446,44 @@ body > footer {
   margin-top: $double;
   font-size: $size-small;
   clear: both;
-  float: right;
-
-  @include respond(4) {
-    width: 50%;
-    margin-top: $grid * 6;
-    clear: none;
-  }
-
+  width: 100%;
   p {
     margin-top: $grid;
     margin-bottom: 0;
   }
 }
 
-// All styles required for sticky footer:
-// if html content would normally be shorted than viewport,
-// this ensures that the footer is affixed to the bottom, while
-// maintaining normal behavior on longer pages
+a[role="button"].contact-button {
+  @include button-basic-white(10);
+  top: 10px;
+}
+
+.return-to-top {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  margin-top: 30px;
+  img {
+    max-height: 30px;
+  }
+  p {
+    margin-top: 0px;
+  }
+}
+
 html {
   min-height: 100%;
   background: $color-trans-whispergray;
 }
 body {
   // Margin bottom equals footer height, set below
-  margin-bottom: 264px;
   position: initial;
 }
+
 body > footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 268px;
+  height: 100%;
 }
 
-@include respond(4) {
-  body {
-    // Margin bottom equals footer height, set below
-    margin-bottom: 225px;
-  }
-  body > footer {
-    height: 225px;
-  }
-}
 
 ////////
 //  Nav for next/previous page (for projects and sketches)
@@ -1580,9 +1577,3 @@ section.people-unaffiliated .list {
   margin-bottom: 32px;
 }
 
-//// Footer Colors
-//.projects footer { background-color: $color-acidmint; }
-//
-//.project footer { background-color: $color-highlight; }
-//
-//.about footer { background-color: $color-electricblue; }
