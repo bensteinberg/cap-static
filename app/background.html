@@ -1,0 +1,39 @@
+---
+title: BACKGROUND
+slug: background
+description: "The story of the past, present, and future of Caselaw Access Project"
+layout: sectioned-page
+---
+
+
+<section class="section-header">
+  <h3>{{ page.title }}</h3>
+  <span>{{ page.description }}</span>
+</section>
+
+<section>
+  <div class="sleeve">
+    {% for section in site.data.background %}
+    <div class="slice">
+      {% assign part = section.section %}
+      <h2>{{ part.title }}</h2>
+      <div class="slice-body">
+          {{ part.text | markdownify }}
+        {% if part.images.size > 0 %}
+          {% for image in part.images %}
+            <img src="{{ image }}" />
+          {% endfor %}
+        {% endif %}
+        {% if part.links.size > 0 %}
+          <ul>
+            {% for link in part.links %}
+              <li>{{ link | strip | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
