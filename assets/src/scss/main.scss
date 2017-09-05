@@ -138,9 +138,31 @@ a {
   &:active { color: inherit; }
 }
 
+a.header-img {
+  @include link-none('black');
+  font-family: rajdhanibold;
+}
+
+a.header-img.right-align {
+  @include right-align
+}
+
+a.header-img > figcaption, a.header-img > img.cap-logo {
+  float: left;
+}
+
+a.header-img > figcaption {
+  margin-left: 10px;
+}
+
+a.header-img > img.lil-logo {
+  height: 30px;
+}
+
+
+
 a[role='button'] {
   @include button-basic(10);
-  width: $grid * 10;
   margin: $grid * 3 auto $double auto;
   //span { @include include-arrow(1px); }
   &:active {
@@ -177,6 +199,10 @@ a.small-btn {
 
 p a, section a, main a {
   @extend %link-inline;
+}
+
+section {
+  padding: $grid * 6 0px;
 }
 
 .image-link, .image-link a {
@@ -272,6 +298,7 @@ nav {
   border: 1px solid $color-gray-dark;
   border-left: 0px;
   border-right: 0px;
+
   li a:link.highlighted {
     color: $color-blue
   }
@@ -1289,14 +1316,12 @@ a.link-project {
 // home page header
 .home {
   h1 {
-    margin-top: $double * 2;
-    margin-bottom: 0;
     font-size: 19.25px;
     font-weight: bold;
 
     @include respond(3) {
       font-size: 40px;
-      margin-top: $grid * 10;
+      //margin-top: $grid * 10;
     }
   }
 }
@@ -1311,7 +1336,7 @@ a.link-project {
   .hero-title {
     font-family: $font-bold;
     font-size: 50px;
-    margin: 1em;
+    margin: $grid * 4 $grid 0px $grid;
   }
 
   .hero-subtitle {
@@ -1398,6 +1423,7 @@ section.home-section {
   }
   &.gallery {
     background-color: $color-tan-gray;
+    padding-bottom: 0px;
   }
 }
 
