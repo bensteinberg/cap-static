@@ -16,12 +16,15 @@ $half: $grid / 2;
 //  Used by the respond($n) mixin
 //  ex:
 //  @include respond(3) {[content]}
-//  sets a min-width meda query at element [3] in this variable (+ 1 px)
+//  sets a min-width media query at element [3] in this variable (+ 1 px)
 $respond-breakpoints: 320px 375px 695px 1048px 1296px;
 
 ////////
 //  typography
-$font-body: 'PostGrotesk', Helvetica, Arial, sans-serif;
+$font-body: 'rajdhaniregular', Helvetica, Arial, sans-serif;
+$font-light: 'rajdhanilight', Helvetica, Arial, sans-serif;
+$font-semibold: 'rajdhanisemibold', Helvetica, Arial, sans-serif;
+$font-bold: 'rajdhanibold', Helvetica, Arial, sans-serif;
 
 //  common sizes
 $size-3xlarge: 72px;
@@ -34,12 +37,20 @@ $size-small: 12px;
 
 ////////
 //  colors
-$color-black: #222;
+$color-gray: #D9D9D9;
+$color-gray-dark: #979797;
+$color-black: #2F2F2F;
+$color-blue: #0075FF;
+$color-tan: #FBFAF2;
+$color-tan-gray: #F6F6F1;
+$color-green: #7ED321;
+$color-white: white;
+
+
 $color-background: white;
 $color-highlight: #bd10e0;
 $color-active: white;
 $color-pink: #FF19D2;
-$color-blue: #0075FF;
 $color-electricblue: #17C5E3;
 $color-warmgray: #EAEAE5;
 $color-yellow: #F8CC1C;
@@ -54,7 +65,6 @@ $color-trans-textwhite: rgba(254,254,254,.4);
 $color-trans-darkwhite: rgba(254,254,254,.9);
 $color-trans-white: rgba(254,254,254,.5);
 $color-trans-lightwhite: rgba(254,254,254,.25);
-$color-white: white;
 $color-acidmint: #18F1C0;
 
 
@@ -191,6 +201,10 @@ $color-acidmint: #18F1C0;
   font-weight: 700;
 }
 
+@mixin right-align {
+  float: right;
+}
+
 //  mixins for <a> styles
 @mixin link-none($linkcolor){
   color: $linkcolor;
@@ -230,27 +244,34 @@ $color-acidmint: #18F1C0;
 
 @mixin button-basic($padding) {
   border-radius: 4px;
-  display: block;
+  display: table;
   text-decoration: none;
   text-align: center;
-  color: $color-highlight;
+  color: $color-blue;
   font-weight: 700;
   font-size: $size-small;
-  border: 1px solid $color-highlight;
+  border: 2px solid $color-blue;
   padding: #{$padding}px;
   cursor: pointer;
-  background-color: transparent;
-  font-family: $font-body;
-  &:hover {
-    border-width: 2px;
-    padding: #{$padding - 1}px;
-  }
-  &:active {
+  background-color: $color-white;
+  font-family: $font-bold;
+  letter-spacing: 1px;
+  &:hover, &:active {
     color: $color-white;
-    border-color: $color-highlight;
-    background: $color-highlight;
+    border-color: $color-blue;
+    background: $color-blue;
   }
 }
+
+@mixin button-basic-white($padding) {
+  @include button-basic($padding);
+  border-color: $color-white;
+
+  &:hover, &:active {
+    border-color: $color-white !important;
+  }
+}
+
 
 // add the arrow sprite after an element
 @mixin include-arrow($offset) {
@@ -345,25 +366,31 @@ $color-acidmint: #18F1C0;
   display: inline-block;
   width: 100%;
   vertical-align: top;
+  font-family: $font-body;
   text-align: center;
   margin: 0 0 $double * 2 0;
   border-top: 1px solid $color-trans-lightgray;
   @include link-none($color-black);
   strong:hover { color: $color-highlight; }
   strong:active { color: $color-black; }
-  @include respond(3) {
-    width: ((100/2) - 1) * 1%;
+  @include respond(5) {
+    //width: ((100/2) - 1) * 1%;
     padding: $double;
     border-top: none;
   }
-  @include respond(4) { width: 33%; }
+  //@include respond(5) { width: 33%; }
 }
 
 %gallery-item-title {
   display: block;
-  @include include-arrow(1px);
-  font-weight: 300;
+  //@include include-arrow(1px);
+  font-family: $font-semibold;
   margin-top: $grid;
+  margin-bottom: $grid;
   overflow: visible;
+  color: $color-blue;
+  letter-spacing: 1px;
+  border-top: 1px solid $color-gray;
+  padding-top: 10px;
   &:active { color: $color-black; }
 }

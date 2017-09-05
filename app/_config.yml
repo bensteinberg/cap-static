@@ -16,7 +16,8 @@ title: The Library Innovation Lab at Harvard University
 description: >
   Bringing the best of technology to the world of libraries and the best of libraries to the world of technology. And vice versa.
 baseurl: ""
-url: "https://lil.law.harvard.edu"
+url: "https://case.law.harvard.edu"
+lilurl: "https://lil.law.harvard.edu"
 sharing-image: "thumbs/800x800r/lab-hero-narrow.jpg"
 
 # Contact
@@ -54,10 +55,6 @@ news_feed_for:
   - projects_retired
   - sketches_active
 
-contributors_feed_for:
-  - projects_active
-  - projects_retired
-
 # Defaults
 defaults:
   - scope:
@@ -90,7 +87,7 @@ defaults:
 pagination:
 
   # Site-wide kill switch, disabled here it doesn't run at all
-  enabled: true
+  enabled: false
 
   # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
   debug: false

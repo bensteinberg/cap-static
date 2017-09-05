@@ -1,19 +1,28 @@
+<header>
+  <a href="{{ site.baseurl }}"
+     class="header-img">
+    <img class="cap-logo"
+       src="{{ site.baseurl }}/assets/images/header-sm-logo.png">
+    <figcaption>CASELAW ACCESS PROJECT</figcaption>
+  </a>
+  <a href="{{ site.lilurl }}"
+     class="header-img right-align">
+    <img class="lil-logo"
+       src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">
+  </a>
+</header>
+
 {% if page.slug == "home" %}
-  <header id="header-splash">
-    <div>
-      <figure>
-        <img src="{{ site.baseurl }}/assets/images/header-splash-logo-ani@1x.gif"
-             srcset="{{ site.baseurl }}/assets/images/header-splash-logo-ani@1x.gif 1x,
-                     {{ site.baseurl }}/assets/images/header-splash-logo-ani@2x.gif 2x"
-             alt="Library Innovation Lab"
-             class="img-full-width">
-      </figure>
-      <h1>{{ page.title }}</h1>
-    </div>
-    {% include nav.html %}
-  </header>
-{% else %}
-  <header>
-    {% include nav.html %}
-  </header>
+  <div class="hero-splash">
+    <figure class="hero-group">
+      <img src="{{ site.baseurl }}/assets/images/header-logo.png"
+           srcset="{{ site.baseurl }}/assets/images/header-logo.png 1x,
+                   {{ site.baseurl }}/assets/images/header-logo@2x.png 2x"
+           alt="Caselaw Access Project">
+      <h1 class="hero-title">{{ page.title }}</h1>
+      <p class="hero-subtitle">{{ page.subtitle }}</p>
+    </figure>
+    <img class="img-full-width hero-mountains" src="{{ site.baseurl }}/assets/images/mountains.png">
+  </div>
 {% endif %}
+{% include nav.html %}

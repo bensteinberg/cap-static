@@ -4,3 +4,4 @@ app/.jekyll-metadata
 assets/dist/
 builds/
 build-environment/apache/logs
+.idea

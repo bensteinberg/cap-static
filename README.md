@@ -3,9 +3,9 @@ Install and Run
 
 1. Install [Docker](https://docs.docker.com/installation/) or [Docker Toolbox](https://www.docker.com/products/docker-toolbox) and fire it up.
 
-2. `git clone https://github.com/harvard-lil/website-static.git`
+2. `git clone https://github.com/harvard-lil/cap-static.git`
 
-3. `cd website-static`
+3. `cd cap-static`
 
 4. Fire up the web server and build the site: `make`
 
