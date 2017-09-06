@@ -1,5 +1,15 @@
 <nav>
   <ul>
+    {% if page.slug != "home" %}
+    <li>
+      <a href="{{ site.baseurl }}"
+       class="header-img">
+        <img class="cap-logo"
+           src="{{ site.baseurl }}/assets/images/header-sm-logo.png">
+        <figcaption>CASELAW ACCESS PROJECT</figcaption>
+      </a>
+    </li>
+    {% endif %}
     <li>
         <a href="{{ site.baseurl }}/background/">BACKGROUND</a>
     </li>
@@ -12,5 +22,14 @@
     <li>
         <a href="{{ site.baseurl }}/contact/">CONTACT</a>
     </li>
+    {% if page.slug != "home" %}
+    <li>
+      <a href="{{ site.lilurl }}"
+           class="header-img right-align">
+      <img class="lil-logo"
+          src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">
+      </a>
+    </li>
+    {% endif %}
   </ul>
 </nav>

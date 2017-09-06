@@ -157,8 +157,15 @@ a.header-img > figcaption {
 
 a.header-img > img.lil-logo {
   height: 30px;
+  margin-top: 40%;
 }
 
+body.home > header {
+  a.header-img > img.lil-logo {
+    height: 30px;
+    margin-top: auto;
+  }
+}
 
 
 a[role='button'] {
@@ -369,7 +376,7 @@ nav {
     }
 
     &:nth-child(n+5) { @include hide-onmobile-then(table); }
-    &:nth-child(n+6) { @include hide-ontablet-then(table); }
+    //&:nth-child(n+6) { @include hide-ontablet-then(table); }
 
     a {
       @extend %vcenter-child;
@@ -604,15 +611,19 @@ section, .container {
     max-width: nth($respond-breakpoints,4);
     padding: 0;
   }
-  &.section-header {
+}
+
+section {
+  .section-header {
+    padding: 0 32px;
     .section-title {
       font-family: $font-bold;
       margin-right: 15px;
       font-size: 30px;
     }
   }
-}
 
+}
 // "slices" are special two-column sections of content, where the
 // section heading is right-aligned in the first column, and the body
 // text is left-aligned in the second column (desktop only). at mobile

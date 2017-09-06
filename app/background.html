@@ -1,17 +1,18 @@
 ---
-title: BACKGROUND
+title: Background
 slug: background
 description: "The story of the past, present, and future of Caselaw Access Project"
 layout: sectioned-page
 ---
 
 
-<section class="sleeve section-header">
-  <span class="section-title">{{ page.title }}</span>
-  <span>{{ page.description }}</span>
-</section>
 
 <section>
+  <div class="sleeve section-header">
+    <span class="slice section-title">{{ page.title }}</span>
+    <span class="slice-body">{{ page.description }}</span>
+  </div>
+
   <div class="sleeve">
     {% for section in site.data.background %}
     <div class="slice">
