@@ -268,7 +268,7 @@ h2 {
 
 header {
   border-bottom: 1px solid $color-gray;
-  margin: 5px;
+  margin: 5px 5px 0px 5px;
 }
 
 header > img {
@@ -293,13 +293,16 @@ header > img.lil-logo {
 
 ////////////////////////////////////////////////
 // nav
+body.home > nav {
+  border: 1px solid $color-gray-dark;
+  border-left: 0px;
+  border-right: 0px;
+}
 
 nav {
   text-align: center;
   font-family: $font-bold;
-  border: 1px solid $color-gray-dark;
-  border-left: 0px;
-  border-right: 0px;
+  border-bottom: 1px solid $color-gray-dark;
 
   li a:link.highlighted {
     color: $color-blue
