@@ -1,15 +1,18 @@
 - section:
     title: What is Caselaw Access Project?
+
     text: |
       Working with newly rediscovered African drumming laws to understand how and why the colonial government controlled and criminalized drumming in native African communities
+    hero_image: perma-box-hero-wide.png
     links: [
-        "[africandrumminglaws.org](http://www.africandrumminglaws.org/)",
-        "[africandrumminglaws.org](http://www.africandrumminglaws.org/)",
-        "[africandrumminglaws.org](http://www.africandrumminglaws.org/)"
+        "[link1.org](http://www.africandrumminglaws.org/)",
+        "[link2.org](http://www.africandrumminglaws.org/)",
+        "[link3.org](http://www.africandrumminglaws.org/)"
         ]
 - section:
     title: How was the data compiled?
     text: |
       Working with newly rediscovered African drumming laws to understand how and why the colonial government controlled and criminalized drumming in native African communities
+    hero_image: perma-box-hero-wide.png
     links:
       ["[africandrumminglaws.org](http://www.africandrumminglaws.org/)"]
