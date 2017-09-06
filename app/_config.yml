@@ -35,12 +35,6 @@ address_city_state: Cambridge, MA 02138
 # Blog Feeds
 blog_feed_title: The Harvard Library Innovation Lab
 
-# Collections
-collections:
-  background:
-    output: true
-    permalink: /background
-
 # Defaults
 defaults:
   - scope:

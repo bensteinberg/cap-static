@@ -1,18 +1,21 @@
+{% if page.slug == "home" %}
 <header>
   <a href="{{ site.baseurl }}"
      class="header-img">
     <img class="cap-logo"
+         alt="Caselaw Access Project logo"
        src="{{ site.baseurl }}/assets/images/header-sm-logo.png">
-    <figcaption>CASELAW ACCESS PROJECT</figcaption>
+    <span class="logo-title">CASELAW ACCESS PROJECT</span>
   </a>
   <a href="{{ site.lilurl }}"
      class="header-img right-align">
     <img class="lil-logo"
-       src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">
+         alt="Library Innovation Lab logo"
+         src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">
   </a>
 </header>
 
-{% if page.slug == "home" %}
+
   <div class="hero-splash">
     <figure class="hero-group">
       <img src="{{ site.baseurl }}/assets/images/header-logo.png"
@@ -22,7 +25,9 @@
       <h1 class="hero-title">{{ page.title }}</h1>
       <p class="hero-subtitle">{{ page.subtitle }}</p>
     </figure>
-    <img class="img-full-width hero-mountains" src="{{ site.baseurl }}/assets/images/mountains.png">
+    <img class="img-full-width hero-mountains"
+         alt="caselaw mountains"
+         src="{{ site.baseurl }}/assets/images/mountains.png">
   </div>
 {% endif %}
 {% include nav.html %}
