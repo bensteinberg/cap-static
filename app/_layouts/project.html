@@ -3,11 +3,9 @@ layout: sectioned-page
 ---
 <section>
 
-  {% include project-nav.html %}
+  <!--{% include project-nav.html %}-->
 
   <div class="sleeve">
-
-    <h1><span>{{ page.type | capitalize }}:</span> {{ page.title }}</h1>
 
     {% if page.project_website %}
       <div class="slice">
@@ -62,28 +60,28 @@ layout: sectioned-page
     </div>
   {% endif %}
 
-  {% assign news = site.data.news | where: "project", page.slug %}
-  {% if news.size > 0 %}
-    <div class="slice news">
+  <!--{% assign news = site.data.news | where: "project", page.slug %}-->
+  <!--{% if news.size > 0 %}-->
+    <!--<div class="slice news">-->
 
-      <div class="sleeve">
-        <h2>What’s been written about {{ page.title }}?</h2>
-        <div class="slice-body">
-          {% for article in news %}
-            <a class="{{ article.type }}" href="{{ article.url }}">
-              <div class="category">{{ article.type | capitalize }}</div>
-              <strong class="title">{{ article.title }}</strong>
-              <span class="date">{{ article.date }}</span>
-              {% if article.publication %}
-                <span class="publication">{{ article.publication }}</span>
-              {% endif %}
-            </a>
-          {% endfor %}
-        </div>
-      </div>
+      <!--<div class="sleeve">-->
+        <!--<h2>What’s been written about {{ page.title }}?</h2>-->
+        <!--<div class="slice-body">-->
+          <!--{% for article in news %}-->
+            <!--<a class="{{ article.type }}" href="{{ article.url }}">-->
+              <!--<div class="category">{{ article.type | capitalize }}</div>-->
+              <!--<strong class="title">{{ article.title }}</strong>-->
+              <!--<span class="date">{{ article.date }}</span>-->
+              <!--{% if article.publication %}-->
+                <!--<span class="publication">{{ article.publication }}</span>-->
+              <!--{% endif %}-->
+            <!--</a>-->
+          <!--{% endfor %}-->
+        <!--</div>-->
+      <!--</div>-->
 
-    </div>
-  {% endif %}
+    <!--</div>-->
+  <!--{% endif %}-->
 
   <div class="slice contact">
 

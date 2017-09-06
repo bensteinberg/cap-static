@@ -147,12 +147,13 @@ a.header-img.right-align {
   @include right-align
 }
 
-a.header-img > figcaption, a.header-img > img.cap-logo {
+a.header-img > img.cap-logo {
   float: left;
 }
 
-a.header-img > figcaption {
-  margin-left: 10px;
+a.header-img > .logo-title {
+  line-height: 32px;
+  margin-left: 5px;
 }
 
 a.header-img > img.lil-logo {

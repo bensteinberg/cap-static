@@ -2,11 +2,11 @@
   <ul>
     {% if page.slug != "home" %}
     <li>
-      <a href="{{ site.baseurl }}"
-       class="header-img">
+      <a href="/" class="header-img">
         <img class="cap-logo"
-           src="{{ site.baseurl }}/assets/images/header-sm-logo.png">
-        <figcaption>CASELAW ACCESS PROJECT</figcaption>
+             alt="Caselaw Access Project logo"
+             src="{{ site.baseurl }}/assets/images/header-sm-logo.png">
+        <span class="logo-title">CASELAW ACCESS PROJECT</span>
       </a>
     </li>
     {% endif %}
@@ -24,10 +24,10 @@
     </li>
     {% if page.slug != "home" %}
     <li>
-      <a href="{{ site.lilurl }}"
-           class="header-img right-align">
-      <img class="lil-logo"
-          src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">
+      <a href="{{ site.lilurl }}" class="header-img right-align">
+        <img class="lil-logo"
+           alt="Library Innovation Lab logo"
+           src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">
       </a>
     </li>
     {% endif %}
