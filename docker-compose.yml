@@ -4,13 +4,13 @@ services:
     build:
       context: .
       dockerfile: ./build-environment/Dockerfile
-    image: lil-website:0.7
+    image: cap-website:0.1
     command: bash
     tty: true
     volumes:
-        - ./app:/usr/src/lil-website/app
-        - ./assets:/usr/src/lil-website/assets
-        - ./builds:/usr/src/lil-website/builds
+        - ./app:/usr/src/cap-website/app
+        - ./assets:/usr/src/cap-website/assets
+        - ./builds:/usr/src/cap-website/builds
   server:
     image: httpd
     ports:
