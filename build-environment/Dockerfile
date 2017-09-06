@@ -10,16 +10,16 @@ ENV LANG C.UTF-8
 # this check)
 RUN bundle config --global frozen 1
 
-RUN mkdir -p /usr/src/lil-website
-WORKDIR /usr/src/lil-website
+RUN mkdir -p /usr/src/cap-website
+WORKDIR /usr/src/cap-website
 
 RUN npm install -g grunt-cli
 
-COPY build-environment/package.json /usr/src/lil-website
+COPY build-environment/package.json /usr/src/cap-website
 RUN npm install
 
-COPY build-environment/Gemfile /usr/src/lil-website
-COPY build-environment/Gemfile.lock /usr/src/lil-website
+COPY build-environment/Gemfile /usr/src/cap-website
+COPY build-environment/Gemfile.lock /usr/src/cap-website
 RUN bundle install
 
-COPY build-environment/gruntfile.js /usr/src/lil-website
+COPY build-environment/gruntfile.js /usr/src/cap-website

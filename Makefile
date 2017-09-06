@@ -24,7 +24,7 @@ bash:
 	docker-compose exec jekyll bash
 
 gemfile_to_container: up
-	docker cp build-environment/Gemfile websitestatic_jekyll_1:/usr/src/lil-website/Gemfile
+	docker cp build-environment/Gemfile websitestatic_jekyll_1:/usr/src/cap-website/Gemfile
 
 gemfile_lock_from_container: up
-	docker cp websitestatic_jekyll_1:/usr/src/lil-website/Gemfile.lock build-environment/Gemfile.lock
+	docker cp websitestatic_jekyll_1:/usr/src/cap-website/Gemfile.lock build-environment/Gemfile.lock
