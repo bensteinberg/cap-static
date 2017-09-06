@@ -308,9 +308,6 @@ module.exports = function (grunt) {
     'assets:expanded',
     'assets:compressed',
     'htmlmin',
-    'copy:api',
-    'copy:feeds',
-    'copy:extras'
   ]);
 
   grunt.registerTask('build:noclean', [
@@ -319,9 +316,6 @@ module.exports = function (grunt) {
     'assets:expanded',
     'assets:compressed',
     'htmlmin',
-    'copy:api',
-    'copy:feeds',
-    'copy:extras'
   ]);
 
   // Register the default task
