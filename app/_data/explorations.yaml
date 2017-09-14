@@ -1,9 +1,17 @@
+# hero image:
+# (800 x 450r)
+# (1200 x 675r)
+# (1600 x 900r)
+# (2100 x 1000r)
+
+#convert "/Users/aaizman/Desktop/Screen Shot 2017-09-14 at 4.45.54 PM.png"  -resize '800x450^' -gravity center -crop 800x450+0+0 +repage /Users/aaizman/Documents/LIL/cap-static/assets/src/thumbs/800x450r/limericks-hero.png
+#
 - section:
     title: California Caselaw Wordclouds
 
     text: |
       Working with newly rediscovered African drumming laws to understand how and why the colonial government controlled and criminalized drumming in native African communities
-    hero_image: perma-box-hero-wide.png
+    hero_image: wordclouds-hero.png
     links: [
         "[See it here](wordclouds)",
         ]
@@ -11,6 +19,6 @@
     title: Limerick Generator
     text: |
       Working with newly rediscovered African drumming laws to understand how and why the colonial government controlled and criminalized drumming in native African communities
-    hero_image: perma-box-hero-wide.png
+    hero_image: limericks-hero.png
     links:
       [ "[See it here](limericks)"]

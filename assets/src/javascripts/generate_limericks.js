@@ -66,10 +66,10 @@ function dict_random_sample(population, size){
 
 
 function generate() {
-    $("#limerick").empty();
+    $(".limerick-body").empty();
     generate_limerick().then(function(limerick){
       for(l in limerick) {
-        $("#limerick").append("<li>" + limerick[l] + "</li>");
+        $(".limerick-body").append(limerick[l] + "<br\>");
       }
     })
   }

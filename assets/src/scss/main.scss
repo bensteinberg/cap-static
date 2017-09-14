@@ -1441,9 +1441,14 @@ section.home-section {
   &.dive-in {
     background-color: $color-white;
   }
-  &.gallery {
+  &.explorations {
     background-color: $color-tan-gray;
     padding-bottom: 0px;
+  }
+  #dive-in-section,
+  #explorations-section,
+  #background-section {
+    margin-top: -100px;
   }
 }
 
@@ -1558,6 +1563,7 @@ section.people-unaffiliated .list {
     font-weight: 700;
     line-height: 1.2em;
     font-size: 18px;
+    margin: 0 auto;
     background-color: transparent;
     text-decoration: none;
     display: inline-block;
@@ -1565,24 +1571,64 @@ section.people-unaffiliated .list {
     box-shadow: 1px 0 #d2e7ff, 0 1px #78b6ff, 2px 1px #d2e7ff, 1px 2px #78b6ff, 3px 2px #d2e7ff, 2px 3px #78b6ff, 4px 3px #d2e7ff, 3px 4px #78b6ff, 5px 4px #d2e7ff, 4px 5px #78b6ff, 6px 5px #d2e7ff, 5px 6px #78b6ff;
     font-family: $font-bold;
     cursor: pointer;
-    left: 10px;
     &:hover, &:active {
-      transform: translate(2px,2px);
+      transform: translate(2px, 2px);
       box-shadow: 1px 0 #d2e7ff, 0 1px #78b6ff, 2px 1px #d2e7ff, 1px 2px #78b6ff, 3px 2px #d2e7ff, 2px 3px #78b6ff, 4px 3px #d2e7ff, 3px 4px #78b6ff;
       background-color: #252525;
       color: #03a9f4;
       border: 3px solid #03a9f4;
     }
   }
-}
-
-section.limericks {
-  min-height: 300px;
-  text-align: center;
-  ul {
-    margin-top: 20px;
-    li {
-      list-style-type: none;
+  section.limericks {
+    min-height: 300px;
+    text-align: center;
+    ul {
+      margin: 0 auto;
+      li {
+        list-style-type: none;
+        line-height: 2em;
+      }
+    }
+    .limerick-container {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    .line-through {
+      display: block;
+	  position: relative;
+	  border-bottom: 2px solid $color-blue;
+	  height: 15px;
+      margin: 10px;
+      &.no-margin {
+        margin: 0px;
+      }
+    }
+    .line-through span {
+      position: absolute;
+      display: inline-block;
+      background: #fff;
+      width: 200px;
+      margin-left: -100px;
+      line-height: 30px;
+    }
+    .stripe-border {
+        background: linear-gradient(
+            to bottom,
+            $color-white,
+            $color-white 25%,
+            $color-blue 25%,
+            $color-blue
+        );
+        background-size: 100% 2px;
+    }
+    .stripe-border blockquote {
+      background: $color-trans-darkwhite;
+      margin: 0 10px;
+      padding: 30px;
+      font-size: 24px;
+      line-height: 1.5;
+      color: $color-blue;
     }
   }
 }
