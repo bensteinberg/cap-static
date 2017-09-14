@@ -1,0 +1,51 @@
+---
+title: Background
+slug: background
+description: "The story of the past, present, and future of Caselaw Access Project"
+layout: sectioned-page
+---
+
+
+
+<section>
+  <div class="sleeve section-header">
+    <span class="slice section-title">{{ page.title }}</span>
+    <span class="slice-body">{{ page.description }}</span>
+  </div>
+
+  <div class="sleeve">
+    {% for section in site.data.background %}
+    <div class="slice">
+      {% assign part = section.section %}
+      <h2>{{ part.title }}</h2>
+      <div class="slice-body">
+          {{ part.text | markdownify }}
+
+        <picture>
+          <!-- 16:9 for wide widths -->
+          <source
+            media="(min-width: 600px)"
+            srcset="{{ site.baseurl }}/assets/thumbs/800x450r/{{ part.hero_image | strip }} 800w,
+                    {{ site.baseurl }}/assets/thumbs/1200x675r/{{ part.hero_image | strip }} 1200w,
+                    {{ site.baseurl }}/assets/thumbs/1600x900r/{{ part.hero_image | strip }} 1600w,
+                    {{ site.baseurl }}/assets/thumbs/2100x1000r/{{ part.hero_image | strip }} 2100w"
+            sizes="100vw">
+
+          <img src="{{ site.baseurl }}/assets/thumbs/800x450r/{{ part.hero_image | strip }}"
+               alt=""
+               class="img-full-width">
+        </picture>
+        <br/>
+        {% if part.links.size > 0 %}
+          <ul>
+            {% for link in part.links %}
+              <li>{{ link | strip | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+

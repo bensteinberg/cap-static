@@ -147,18 +147,26 @@ a.header-img.right-align {
   @include right-align
 }
 
-a.header-img > figcaption, a.header-img > img.cap-logo {
+a.header-img > img.cap-logo {
   float: left;
 }
 
-a.header-img > figcaption {
-  margin-left: 10px;
+a.header-img > .logo-title {
+  line-height: 32px;
+  margin-left: 5px;
 }
 
 a.header-img > img.lil-logo {
   height: 30px;
+  margin-top: 40%;
 }
 
+body.home > header {
+  a.header-img > img.lil-logo {
+    height: 30px;
+    margin-top: auto;
+  }
+}
 
 
 a[role='button'] {
@@ -268,7 +276,7 @@ h2 {
 
 header {
   border-bottom: 1px solid $color-gray;
-  margin: 5px;
+  margin: 5px 5px 0px 5px;
 }
 
 header > img {
@@ -293,13 +301,16 @@ header > img.lil-logo {
 
 ////////////////////////////////////////////////
 // nav
+body.home > nav {
+  border: 1px solid $color-gray-dark;
+  border-left: 0px;
+  border-right: 0px;
+}
 
 nav {
   text-align: center;
   font-family: $font-bold;
-  border: 1px solid $color-gray-dark;
-  border-left: 0px;
-  border-right: 0px;
+  border-bottom: 1px solid $color-gray-dark;
 
   li a:link.highlighted {
     color: $color-blue
@@ -366,7 +377,7 @@ nav {
     }
 
     &:nth-child(n+5) { @include hide-onmobile-then(table); }
-    &:nth-child(n+6) { @include hide-ontablet-then(table); }
+    //&:nth-child(n+6) { @include hide-ontablet-then(table); }
 
     a {
       @extend %vcenter-child;
@@ -603,6 +614,17 @@ section, .container {
   }
 }
 
+section {
+  .section-header {
+    padding: 0 32px;
+    .section-title {
+      font-family: $font-bold;
+      margin-right: 15px;
+      font-size: 30px;
+    }
+  }
+
+}
 // "slices" are special two-column sections of content, where the
 // section heading is right-aligned in the first column, and the body
 // text is left-aligned in the second column (desktop only). at mobile
@@ -633,6 +655,7 @@ section, .container {
 
   h2, h3 {
     @include heading-secondary;
+    color: $color-blue;
     @include respond(4){
       @include overline($color-black, $grid * 6, $b-margin:$grid);
       font-size: $size-body;
@@ -1527,53 +1550,39 @@ section.people-unaffiliated .list {
   }
 }
 
-// the fellows people cards
-.fellow {
-  margin-bottom: 24px;
-
-  .intro {
-    border-top: 1px solid $color-trans-lightgray;
-    border-bottom: 1px solid $color-trans-lightgray;
-    width: 100%;
-    padding: 16px 0;
-  }
-  img {
-    @extend %thumb-rounded;
+.limericks {
+  button.generate-limerick {
+    border: 3px solid #0075ff;
+    color: #0075ff;
+    padding: 8px 14px;
+    font-weight: 700;
+    line-height: 1.2em;
+    font-size: 18px;
+    background-color: transparent;
+    text-decoration: none;
     display: inline-block;
-    width: 150px;
-    float: left;
-  }
-  .summary {
-    display: inline-block;
-    float: right;
-    overflow: visible;
-    width: calc(100% - 174px);
-    margin-left: 24px;
-    h2 {
-      margin-top: 16px;
+    position: relative;
+    box-shadow: 1px 0 #d2e7ff, 0 1px #78b6ff, 2px 1px #d2e7ff, 1px 2px #78b6ff, 3px 2px #d2e7ff, 2px 3px #78b6ff, 4px 3px #d2e7ff, 3px 4px #78b6ff, 5px 4px #d2e7ff, 4px 5px #78b6ff, 6px 5px #d2e7ff, 5px 6px #78b6ff;
+    font-family: $font-bold;
+    cursor: pointer;
+    left: 10px;
+    &:hover, &:active {
+      transform: translate(2px,2px);
+      box-shadow: 1px 0 #d2e7ff, 0 1px #78b6ff, 2px 1px #d2e7ff, 1px 2px #78b6ff, 3px 2px #d2e7ff, 2px 3px #78b6ff, 4px 3px #d2e7ff, 3px 4px #78b6ff;
+      background-color: #252525;
+      color: #03a9f4;
+      border: 3px solid #03a9f4;
     }
-    p {
-      font-size: .8em;
-    }
-    @include respond(4){
-      max-width: 75%;
-      margin-right: calc(25% - 174px);
-      h2 {
-        margin-top: 24px;
-      }
-      p {
-        font-size: 1em;
-      }
-    }
-  }
-  .small-btn {
-    margin-bottom: 9px;
   }
 }
 
-// the fellows-2016 video
-.fellows-2016 .embed-container {
-  margin-top: 32px;
-  margin-bottom: 32px;
+section.limericks {
+  min-height: 300px;
+  text-align: center;
+  ul {
+    margin-top: 20px;
+    li {
+      list-style-type: none;
+    }
+  }
 }
-

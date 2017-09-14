@@ -1,0 +1,16 @@
+- section:
+    title: California Caselaw Wordclouds
+
+    text: |
+      Working with newly rediscovered African drumming laws to understand how and why the colonial government controlled and criminalized drumming in native African communities
+    hero_image: perma-box-hero-wide.png
+    links: [
+        "[See it here](wordclouds)",
+        ]
+- section:
+    title: Limerick Generator
+    text: |
+      Working with newly rediscovered African drumming laws to understand how and why the colonial government controlled and criminalized drumming in native African communities
+    hero_image: perma-box-hero-wide.png
+    links:
+      [ "[See it here](limericks)"]
