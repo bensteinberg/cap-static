@@ -8,7 +8,15 @@ custom-scripts: ['jquery-3.1.1.min.js', 'generate_limericks.js']
       <button onclick="generate()" class="generate-limerick">
         GENERATE
       </button>
-      <ul id="limerick"></ul>
+      <div class="limerick-container">
+        <div class="line-through"></div>
+        <div class="stripe-border">
+          <blockquote class="limerick-body">
+            <!-- limerick goes here -->
+          </blockquote>
+        </div>
+      <div class="line-through no-margin"></div>
+      </div>
     </div>
 </section>
 

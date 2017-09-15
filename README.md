@@ -1,6 +1,7 @@
 Install and Run
 ---------------
-
+This setup is a clone of [website-static](https://github.com/harvard-lil/website-static).
+ 
 1. Install [Docker](https://docs.docker.com/installation/) or [Docker Toolbox](https://www.docker.com/products/docker-toolbox) and fire it up.
 
 2. `git clone https://github.com/harvard-lil/cap-static.git`
