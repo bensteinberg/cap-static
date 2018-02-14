@@ -13,17 +13,18 @@ layout: sectioned-page
           Click on an image for a larger size.
         </div>
         <div class="image-container">
-        <div class="grid">
-          {% for file in site.static_files %}
+          <div class="grid">
+            {% for file in site.static_files %}
             <a href="{{file.path}}" class="cell">
               {% if file.path contains "wordclouds" %}
-                  <img class="responsive-image" src="{{file.path}}" alt="Wordcloud"/>
-                {% assign name = file.name %}
-                {% assign size = name | size | minus: 4 %}
-                <p class="year">{{ name | slice: 0, size }}</p>
+              <img class="responsive-image" src="{{file.path}}" alt="Wordcloud"/>
+              {% assign name = file.name %}
+              {% assign size = name | size | minus: 4 %}
+              <p class="year">{{ name | slice: 0, size }}</p>
               {% endif %}
             </a>
-          {% endfor %}
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
