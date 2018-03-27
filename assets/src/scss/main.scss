@@ -115,10 +115,6 @@ a {
 a[role='button'] {
   @include button-basic(10);
   margin: $grid * 3 auto $double auto;
-  span { @include include-arrow(1px); }
-  &:active {
-    span  { @include include-arrow-white; }
-  }
 }
 
 a[role='button'].round-button {
@@ -396,7 +392,6 @@ a[role="button"].contact-button {
 // for convenience, all <section>s are containers
 section, .container {
   padding: $grid * 3 $double, 0px;
-  background-color: $color-trans-whispergray;
   @include respond(3) { padding: $grid * 4 $double * 2, 0px; }
   @include respond(4) { padding-top: $grid * 6; }
   h1, h2, h3, .description {
@@ -603,65 +598,6 @@ a.gallery-item {
   border-bottom: none;
 }
 
-.gallery-item-person {
-  @extend %gallery-item;
-  width: 49%;
-  border-top: none;
-  padding: 0 $grid;
-  @include respond(4) {
-    padding: 0 $double;
-    width: 32.3%;
-  }
-
-  figure {
-    @extend %thumb-rounded;
-    margin: 0;
-  }
-
-  .name {
-    @extend %gallery-item-title;
-    margin-top: $double;
-    @include respond(4) { font-size: $size-body; }
-  }
-
-  .role {
-    display: block;
-    font-size: $size-small;
-    font-weight: 500;
-    @include overline($color-trans-gray, $grid * 7, $t-margin:$grid, $r-margin:auto, $b-margin:$grid, $l-margin:auto);
-  }
-
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-    font-size: $size-small;
-    li { margin-top: $grid; }
-    a {
-      @include include-arrow(1px);
-      @include link-highlight($color-highlight, $color-black);
-      &:hover { @include include-arrow-black; }
-      &:active { @include include-arrow-highlight; }
-    }
-  }
-}
-
-// Gallery items may optionally be contained inside one of these wrappers
-.gallery-sq {
-  max-width: nth($respond-breakpoints,5);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: $double * 2;
-  text-align: left;
-  @include respond(3) {
-    margin-left: -$double;
-    margin-right: -$double;
-  }
-  @include respond(4) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .gallery-crl {
   margin-left: -14px;
   margin-right: -14px;
@@ -677,16 +613,12 @@ a.gallery-item {
   }
 
   .gallery-item {
-    width: 49%;
-    padding: 0 $grid;
+    width: 100%;
     @include respond(3) {
-      width: $grid * 25;
+      width: 33%;
     }
-    @include respond(4) {
-      padding: 0 $double;
-    }
-    border-top: none;
   }
+
 }
 
 .gallery-thirds .gallery-item {
