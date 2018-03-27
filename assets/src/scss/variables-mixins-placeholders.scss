@@ -92,17 +92,6 @@ $color-acidmint: #18F1C0;
   }
 }
 
-// see description containers/sleeves/slices for usage
-@mixin pop-out-of-sleeve($thisbg) {
-  background-color: $thisbg;
-  margin-left: -$double;
-  margin-right: -$double;
-  max-width: none;
-  @include respond(3){
-    margin-left: -$double * 2;
-    margin-right: -$double * 2;
-  }
-}
 
 // Typography
 @mixin overline(
@@ -118,11 +107,8 @@ $color-acidmint: #18F1C0;
     height: 1px;
     border-bottom: 1px solid $color;
     width: $width;
-    margin-top: $t-margin;
-    margin-right: $r-margin;
-    margin-bottom: $b-margin;
-    margin-left: $l-margin;
-  }
+    margin: $t-margin $r-margin $b-margin $l-margin;
+    }
 }
 
 @mixin underline (
@@ -139,16 +125,13 @@ $color-acidmint: #18F1C0;
     width: $width;
     height: $height;
     border-bottom: 1px solid $color;
-    margin-top: $t-margin;
-    margin-right: $r-margin;
-    margin-bottom: $b-margin;
-    margin-left: $l-margin;
+    margin: $t-margin $r-margin $b-margin $l-margin;
   }
 }
 
 @mixin hed-common {
   line-height: 1.1;
-  font-weight: 700;
+  font-family: $font-bold;
   margin: 0;
   @include respond(3) {
     font-weight: 300;
@@ -162,6 +145,7 @@ $color-acidmint: #18F1C0;
 
 @mixin heading-primary {
   @include hed-common;
+  text-align: center;
   font-size: $size-xlarge;
   margin: $grid auto;
   font-weight: 300;
@@ -177,7 +161,7 @@ $color-acidmint: #18F1C0;
 }
 
 @mixin heading-secondary {
-  font-weight: 700;
+  font-family: $font-bold;
   margin-bottom: $double;
   margin-top: $grid * 3;
   @include respond(4){
@@ -197,7 +181,7 @@ $color-acidmint: #18F1C0;
 
 @mixin tiny-bold {
   font-size: $size-small;
-  font-weight: 700;
+  font-family: $font-bold;
 }
 
 @mixin right-align {
@@ -247,7 +231,7 @@ $color-acidmint: #18F1C0;
   text-decoration: none;
   text-align: center;
   color: $color-blue;
-  font-weight: 700;
+  font-family: $font-bold;
   font-size: $size-small;
   border: 2px solid $color-blue;
   padding: #{$padding}px;

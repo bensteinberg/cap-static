@@ -1,0 +1,15 @@
+{% if page.slug == "home" %}
+<div class="hero-splash sleeve">
+  <figure class="hero-group">
+    <img src="{{ site.baseurl }}/assets/images/header-logo.png"
+         srcset="{{ site.baseurl }}/assets/images/header-logo.png 1x,
+                 {{ site.baseurl }}/assets/images/header-logo@2x.png 2x"
+         alt="Caselaw Access Project">
+    <h1 class="hero-title">{{ page.title }}</h1>
+    <p class="hero-subtitle">{{ page.subtitle }}</p>
+  </figure>
+  <img class="img-full-width hero-mountains"
+       alt="caselaw mountains"
+       src="{{ site.baseurl }}/assets/images/mountains.png">
+</div>
+{% endif %}
