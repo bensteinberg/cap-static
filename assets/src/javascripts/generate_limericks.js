@@ -10,7 +10,7 @@ function generate_limerick(){
             long_lines[1],
             short_lines[0],
             short_lines[1],
-            long_lines[2]]
+            long_lines[2]];
         return limerick;
       });
 }

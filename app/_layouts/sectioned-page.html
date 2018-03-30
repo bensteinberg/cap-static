@@ -4,15 +4,13 @@ layout: default
 <body class="{{ page.type }} {{ page.slug }}">
 
   {% include header.html %}
-
-  {{ content }}
-
-  <footer>
-    <div class="sleeve">
-      {% include footer.html %}
-    </div>
-  </footer>
-
-  {% comment %}<script src="{{ site.baseurl }}/assets/javascripts/main.js"></script>{% endcomment %}
+  {% if page.slug == "home" %}
+    {% include hero.html %}
+    {% include mountains.html %}
+    {% include nav.html %}
+  {% endif %}
+  <div class="main">{{ content }}</div>
+  {% include mountains.html %}
+  {% include footer.html %}
   {% include custom-scripts.html %}
 </body>

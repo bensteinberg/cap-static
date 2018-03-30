@@ -2,34 +2,27 @@
 layout: sectioned-page
 title: CASELAW ACCESS PROJECT
 subtitle: Providing an open data set of every U.S. court decision ever published, for use by lawyers, scholars, programmers, and everyone else.
-title-tag: The Library Innovation Lab at Harvard University
-description: "Home of Perma.cc, H2O, Awesome Box, and others. We're building things in libraries."
+title-tag: Caselaw Access Project
+description: "unlimited caselaw forever"
 slug: home
 sharing-image: images/header-splash-logo-ani@1x.gif
 custom-scripts: ['jquery-3.1.1.min.js']
 ---
+<div class="sleeve">
+  <section id="dive-in-section" class="home-section dive-in">
+      <h3>DIVE IN!</h3>
+      <div class="description">Why wait? Start exploring the data</div>
+      {% include dive-in-section.html %}
+  </section>
+</div>
 
-<section id="background-section" class="home-section background">
-  <h3>BACKGROUND</h3>
-  <span class="description">The CAP story</span>
+<div class="section-border">&nbsp;</div>
 
-  {% include background-section.html %}
-  <a href="{{ site.baseurl }}/background/"
-     role="button"
-     aria-label="Read more background">
-    <span>READ MORE</span>
-  </a>
-</section>
-
-<section id="dive-in-section" class="home-section dive-in">
-  <h3>DIVE IN!</h3>
-  <span class="description">Browse, download, work with the data</span>
-  {% include dive-in-section.html %}
-</section>
-
-<section id="explorations-section" class="home-section explorations">
-  <h3>DATA EXPLORATIONS</h3>
-  <span class="description">Take a look at some of the things you can do with the data</span>
-  {% include explorations-section.html %}
-</section>
-
+<div class="sleeve">
+  <section id="explorations-section"
+         class="home-section explorations">
+    <h3>DATA EXPLORATIONS</h3>
+    <div class="description">Take a look at some of the things you can do with the data</div>
+    {% include explorations-section.html %}
+  </section>
+</div>

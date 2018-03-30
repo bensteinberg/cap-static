@@ -1,35 +1,35 @@
-<nav>
+l<nav>
   <ul>
-    {% if page.slug != "home" %}
+    <!--{% if page.slug != "home" %}-->
+    <!--<li>-->
+      <!--<a href="/" class="header-img">-->
+        <!--<img class="cap-logo"-->
+             <!--alt="Caselaw Access Project logo"-->
+             <!--src="{{ site.baseurl }}/assets/images/header-sm-logo.png">-->
+        <!--<span class="logo-title longname">CASELAW ACCESS PROJECT</span>-->
+      <!--</a>-->
+    <!--</li>-->
+    <!--{% endif %}-->
     <li>
-      <a href="/" class="header-img">
-        <img class="cap-logo"
-             alt="Caselaw Access Project logo"
-             src="{{ site.baseurl }}/assets/images/header-sm-logo.png">
-        <span class="logo-title">CASELAW ACCESS PROJECT</span>
-      </a>
-    </li>
-    {% endif %}
-    <li>
-        <a href="/#background">BACKGROUND</a>
-    </li>
-    <li>
-        <a class="highlighted" href="/#dive-in">DIVE IN!</a>
-    </li>
-    <li>
-        <a href="/#explorations">EXPLORATIONS</a>
+        <a class="highlighted"
+           href="/#dive-in">
+          DIVE IN!
+        </a>
     </li>
     <li>
-        <a href="mailto:{{ site.email }}?subject=Caselaw%20Access%20Project">CONTACT</a>
+        <a href="/#explorations">EXPLORE</a>
     </li>
-    {% if page.slug != "home" %}
     <li>
-      <a href="{{ site.lilurl }}" class="header-img right-align">
-        <img class="lil-logo"
-           alt="Library Innovation Lab logo"
-           src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">
-      </a>
+        <a href="/#footer">INFO</a>
     </li>
-    {% endif %}
+    <!--{% if page.slug != "home" %}-->
+    <!--<li>-->
+      <!--<a href="{{ site.lilurl }}" class="header-img right-align">-->
+        <!--<img class="lil-logo"-->
+           <!--alt="Library Innovation Lab logo"-->
+           <!--src="{{ site.baseurl }}/assets/images/header-lil-sm-logo.png">-->
+      <!--</a>-->
+    <!--</li>-->
+    <!--{% endif %}-->
   </ul>
 </nav>

@@ -44,12 +44,3 @@ If you change any of the contents of the build-environment directory, you need t
 If you need to update the Gemfile: update it. Comment out ```RUN bundle config --global frozen 1``` from the Dockerfile. Run ```make rebuild_image``` followed by ```make gemfile_lock_from_container```. Uncomment that line from the Dockerfile, ```make rebuild_image``` again... And you're done.
 
 Periodically, you might want to run ```docker images``` to see if you have accumulated a lot of cruft. Clean up manually, or try running ```docker-compose down --rmi local```.
-
-
-Writing Blog Posts (Docker not required)
-----------------------------------------
-Head to [https://lil-blog-generator.herokuapp.com/](https://lil-blog-generator.herokuapp.com/) to write your post in the on-screen editor. Use the editor's buttons, if you want the preview to work correctly. (Manually-entered markdown is fine, but won't render correctly here in the preview.) Detailed instructions are below the editor, if you are into that kind of thing.
-
-Hit the editor's "Preview/Download" to check your work.
-
-When you are satisfied, hit the "Download" button to download your draft, and follow the simple instructions to upload your draft to Github.

@@ -46,6 +46,10 @@ $color-tan-gray: #F6F6F1;
 $color-green: #7ED321;
 $color-white: white;
 
+$color-medium-blue: #78B6FF;
+$color-light-blue: #D2E7FF;
+$color-dark-blue: #22349A;
+$color-orange: #EDA633;
 
 $color-background: white;
 $color-highlight: #EDA633;
@@ -53,8 +57,6 @@ $color-active: white;
 $color-pink: #FF19D2;
 $color-electricblue: #17C5E3;
 $color-warmgray: #EAEAE5;
-$color-yellow: #F8CC1C;
-$color-sunset: #FFA91B;
 $color-trans-darkgray: rgba(0,0,0,.5);
 $color-trans-lightgray: rgba(0,0,0,.1);
 $color-trans-whispergray: rgba(100,100,0,.02);
@@ -64,7 +66,6 @@ $color-trans-textwhite: rgba(254,254,254,.4);
 $color-trans-darkwhite: rgba(254,254,254,.9);
 $color-trans-white: rgba(254,254,254,.5);
 $color-trans-lightwhite: rgba(254,254,254,.25);
-$color-acidmint: #18F1C0;
 
 
 ////////////////////////////////////////////////
@@ -92,17 +93,6 @@ $color-acidmint: #18F1C0;
   }
 }
 
-// see description containers/sleeves/slices for usage
-@mixin pop-out-of-sleeve($thisbg) {
-  background-color: $thisbg;
-  margin-left: -$double;
-  margin-right: -$double;
-  max-width: none;
-  @include respond(3){
-    margin-left: -$double * 2;
-    margin-right: -$double * 2;
-  }
-}
 
 // Typography
 @mixin overline(
@@ -118,11 +108,8 @@ $color-acidmint: #18F1C0;
     height: 1px;
     border-bottom: 1px solid $color;
     width: $width;
-    margin-top: $t-margin;
-    margin-right: $r-margin;
-    margin-bottom: $b-margin;
-    margin-left: $l-margin;
-  }
+    margin: $t-margin $r-margin $b-margin $l-margin;
+    }
 }
 
 @mixin underline (
@@ -139,16 +126,13 @@ $color-acidmint: #18F1C0;
     width: $width;
     height: $height;
     border-bottom: 1px solid $color;
-    margin-top: $t-margin;
-    margin-right: $r-margin;
-    margin-bottom: $b-margin;
-    margin-left: $l-margin;
+    margin: $t-margin $r-margin $b-margin $l-margin;
   }
 }
 
 @mixin hed-common {
   line-height: 1.1;
-  font-weight: 700;
+  font-family: $font-bold;
   margin: 0;
   @include respond(3) {
     font-weight: 300;
@@ -162,6 +146,7 @@ $color-acidmint: #18F1C0;
 
 @mixin heading-primary {
   @include hed-common;
+  text-align: center;
   font-size: $size-xlarge;
   margin: $grid auto;
   font-weight: 300;
@@ -177,7 +162,7 @@ $color-acidmint: #18F1C0;
 }
 
 @mixin heading-secondary {
-  font-weight: 700;
+  font-family: $font-bold;
   margin-bottom: $double;
   margin-top: $grid * 3;
   @include respond(4){
@@ -197,7 +182,7 @@ $color-acidmint: #18F1C0;
 
 @mixin tiny-bold {
   font-size: $size-small;
-  font-weight: 700;
+  font-family: $font-bold;
 }
 
 @mixin right-align {
@@ -247,7 +232,7 @@ $color-acidmint: #18F1C0;
   text-decoration: none;
   text-align: center;
   color: $color-blue;
-  font-weight: 700;
+  font-family: $font-bold;
   font-size: $size-small;
   border: 2px solid $color-blue;
   padding: #{$padding}px;
