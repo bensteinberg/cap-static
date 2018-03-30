@@ -8,15 +8,21 @@ slug: home
 sharing-image: images/header-splash-logo-ani@1x.gif
 custom-scripts: ['jquery-3.1.1.min.js']
 ---
+<div class="sleeve">
+  <section id="dive-in-section" class="home-section dive-in">
+      <h3>DIVE IN!</h3>
+      <div class="description">Why wait? Start exploring the data</div>
+      {% include dive-in-section.html %}
+  </section>
+</div>
 
-<section id="dive-in-section" class="home-section dive-in">
-    <h3>DIVE IN!</h3>
-    <div class="description">Why wait? Start exploring the data</div>
-    {% include dive-in-section.html %}
-</section>
+<div class="section-border">&nbsp;</div>
 
-<section id="explorations-section" class="home-section explorations">
-  <h3>DATA EXPLORATIONS</h3>
-  <span class="description">Take a look at some of the things you can do with the data</span>
-  {% include explorations-section.html %}
-</section>
+<div class="sleeve">
+  <section id="explorations-section"
+         class="home-section explorations">
+    <h3>DATA EXPLORATIONS</h3>
+    <div class="description">Take a look at some of the things you can do with the data</div>
+    {% include explorations-section.html %}
+  </section>
+</div>
