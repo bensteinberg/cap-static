@@ -278,6 +278,7 @@ module.exports = function (grunt) {
     'newer:copy:fonts',
     'newer:copy:images',
     'newer:copy:javascripts',
+    'newer:copy:wordclouds',
     'newer:copy:thumbs',
     'newer:copy:toDevBuild'
   ]);
