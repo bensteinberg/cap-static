@@ -201,25 +201,25 @@ module.exports = function (grunt) {
         dest: '<%= globalConfig.prodBuild %>/<%= globalConfig.assetsDestination %>/'
       },
       // components of the jekyll-built site that are NOT transferred via htmlmin
-      api: {
-        expand: true,
-        nonull: true,
-        cwd: '<%= globalConfig.devBuild %>/api',
-        src: '**/*',
-        dest: '<%= globalConfig.prodBuild %>/api/'
-      },
-      feeds: {
-        expand: true,
-        nonull: true,
-        cwd: '<%= globalConfig.devBuild %>/blog/feed',
-        src: '**/*',
-        dest: '<%= globalConfig.prodBuild %>/blog/feed/'
-      },
       extras: {
         expand: true,
         nonull: true,
         cwd: '<%= globalConfig.devBuild %>',
         src: ['.htaccess', 'robots.txt', 'sitemap.xml'],
+        dest: '<%= globalConfig.prodBuild %>/'
+      },
+      wordclouds: {
+        expand: true,
+        nonull: true,
+        cwd: '<%= globalConfig.devBuild %>/wordclouds',
+        src: '*',
+        dest: '<%= globalConfig.prodBuild %>/wordclouds'
+      },
+      limericks: {
+        expand: true,
+        nonull: true,
+        cwd: '<%= globalConfig.devBuild %>',
+        src: 'limerick_lines.json',
         dest: '<%= globalConfig.prodBuild %>/'
       }
     },
@@ -308,6 +308,9 @@ module.exports = function (grunt) {
     'assets:expanded',
     'assets:compressed',
     'htmlmin',
+    'copy:wordclouds',
+    'copy:limericks',
+
   ]);
 
   grunt.registerTask('build:noclean', [
@@ -316,6 +319,8 @@ module.exports = function (grunt) {
     'assets:expanded',
     'assets:compressed',
     'htmlmin',
+    'copy:wordclouds',
+    'copy:limericks',
   ]);
 
   // Register the default task
