@@ -1,4 +1,3 @@
-
 ////////////////////////////////////////////////
 //  variables
 
@@ -21,7 +20,10 @@ $respond-breakpoints: 320px 375px 695px 1048px 1296px;
 
 ////////
 //  typography
-$font-body: 'rajdhaniregular', Helvetica, Arial, sans-serif;
+
+$font-body: 'Fira Sans', Helvetica, Arial, sans-serif;
+
+//$font-body: 'rajdhaniregular', Helvetica, Arial, sans-serif;
 $font-light: 'rajdhanilight', Helvetica, Arial, sans-serif;
 $font-semibold: 'rajdhanisemibold', Helvetica, Arial, sans-serif;
 $font-bold: 'rajdhanibold', Helvetica, Arial, sans-serif;
@@ -233,7 +235,7 @@ $color-trans-lightwhite: rgba(254,254,254,.25);
   text-align: center;
   color: $color-blue;
   font-family: $font-bold;
-  font-size: $size-small;
+  font-size: 13px;
   border: 2px solid $color-blue;
   padding: #{$padding}px;
   cursor: pointer;
