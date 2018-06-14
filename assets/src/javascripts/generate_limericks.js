@@ -1,5 +1,5 @@
 function generate_limerick(){
-  return $.getJSON("/explorations/limerick_lines.json")
+  return $.getJSON("/limerick_lines.json")
       .then(function(json) {
         var line_types = json;
 
