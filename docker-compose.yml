@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./build-environment/Dockerfile
-    image: cap-website:0.2
+    image: cap-website:0.3
     command: bash
     tty: true
     volumes:
