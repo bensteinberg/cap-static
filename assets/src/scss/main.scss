@@ -296,11 +296,6 @@ nav {
         }
       }
       span.longname { @include hide-onmobile-then(inline); }
-      a {
-        padding: 0 12px 0 46px;
-        @include respond(3) { padding-right: 22px; }
-        @include respond(4) { padding-right: 34px; }
-      }
     }
     a {
       @extend %vcenter-child;
@@ -645,9 +640,6 @@ a.gallery-item {
   @include respond(3) {
     margin-left: -$double;
     margin-right: -$double;
-  }
-  @include respond(4) {
-    text-align: left;
   }
 
   .gallery-item {
