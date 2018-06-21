@@ -242,6 +242,10 @@ header {
   }
 }
 
+.header-offset{
+  height:40px;
+}
+
 .anchor-offset {
   top: -160px;
 }
@@ -323,7 +327,7 @@ nav {
 
 .hero-splash {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 60px;
   .hero-subtitle {
     @include heading-secondary;
     font-family: $font-light;
